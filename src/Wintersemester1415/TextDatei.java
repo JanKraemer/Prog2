@@ -10,6 +10,7 @@ public class TextDatei {
 		String line ="";
 		while(line != null)
 		line = br.readLine();
+		br.close();
 		}catch(Exception e){
 			e.getMessage();
 		}
