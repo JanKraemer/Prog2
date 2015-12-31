@@ -1,0 +1,3 @@
+Anzahl gerade: 2
+anzahl ungerade: 3
+Anzahl negativ: 2
