@@ -15,10 +15,16 @@ public static void main(String[] args){
 			// den DataInputStream können wir dafür nutzen..  Methode gechanged massively
 			dis =new DataInputStream(new FileInputStream("zeichendatei.txt"));
 			int zahl;
-			while((zahl = (int) dis.read())!= -1){
-			if (zahl>128)negativ++;
-			if(zahl%2==0) gerade++;
-			else ungerade++;
+			boolean eof = false;
+			while(!eof){
+				try{
+					zahl = (int) dis.readInt();
+					if (zahl<0)negativ++;
+					if(zahl%2==0) gerade++;
+					else ungerade++;
+				}catch(EOFException e){
+					eof = true;
+				}
 			}
 			dis.close();
 		}catch(Exception e){
