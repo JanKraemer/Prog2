@@ -1,0 +1,10 @@
+FaxType=GCLASS2R
+StationId=093135118885
+HeaderLine=Pruefungsamt FHWS
+ReceiveSound=newfax.wav
+
+MaxAttempts=5
+AttemptDelay=3
+
+AutoAnswer=true
+AnswerRingCount=5
