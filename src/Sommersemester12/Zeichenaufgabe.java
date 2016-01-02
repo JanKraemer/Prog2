@@ -28,6 +28,7 @@ public static void main(String[] args){
 			}
 			dis.close();
 		}catch(Exception e){
+			e.getMessage();
 			System.exit(-1);
 		}
 		
