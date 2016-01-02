@@ -28,7 +28,7 @@ public static void main(String[] args){
 			}
 			dis.close();
 		}catch(Exception e){
-			e.printStackTrace();
+			System.exit(-1);
 		}
 		
 		BufferedWriter bw;
