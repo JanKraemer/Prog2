@@ -2,7 +2,6 @@ package GUIExercise;
 
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
 
 
@@ -17,8 +16,7 @@ public class Passwort extends JFrame{
     private JPanel panel;
     
      
-    public Passwort()
-    {
+    public Passwort(){
         this.setTitle("Passwort - Generator");
         this.setLayout(new FlowLayout());
         initGUI();
@@ -30,8 +28,7 @@ public class Passwort extends JFrame{
         this.setVisible(true);
     } //endconstructor
 
-    private void initGUI()
-    {
+    private void initGUI(){
         button_ref = new JButton("--> Passwort ");
         button_ref.setToolTipText("Durch Aktivierung dieses Buttons wird eine neues Kennwort generiert");
         button_ref.addActionListener(new ButtonHandler());
@@ -52,8 +49,7 @@ public class Passwort extends JFrame{
         panel.add(l2_ref, BorderLayout.NORTH);
         panel.add(first,BorderLayout.CENTER);
         panel.add(second,BorderLayout.SOUTH);
-        }
-    
+    }
     
     private class ButtonHandler implements ActionListener, KeyListener, ItemListener
 	{
@@ -111,5 +107,4 @@ public class Passwort extends JFrame{
 		demo_ref.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		demo_ref.setLocationRelativeTo(null);
 	} //endmethod
-
 }

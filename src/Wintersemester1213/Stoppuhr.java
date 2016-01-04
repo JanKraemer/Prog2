@@ -63,6 +63,7 @@ public class Stoppuhr extends JFrame{
 			else if(e.getSource() == bStop_ref)
 				running = false;
 			else {
+				running = false;
 				abgelaufeneHunderstel = 0;
 				label_ref.setText("00:00:00");
 			}
