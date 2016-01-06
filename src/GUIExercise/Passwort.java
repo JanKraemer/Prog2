@@ -53,17 +53,14 @@ public class Passwort extends JFrame{
     
     private class ButtonHandler implements ActionListener, KeyListener, ItemListener
 	{
-
-		@Override
+    	@Override
 		public void actionPerformed(ActionEvent event_ref) {
 			this.action();
 		}
-
 		@Override
 		public void keyTyped(KeyEvent e) {
 			// TODO Auto-generated method stub
-		}
-		
+		}	
 		@Override
 		public void keyPressed(KeyEvent e) {
 			// TODO Auto-generated method stub
@@ -71,7 +68,6 @@ public class Passwort extends JFrame{
 				this.action();
 			}
 		}
-
 		@Override
 		public void keyReleased(KeyEvent e) {
 			// TODO Auto-generated method stub	
@@ -79,15 +75,12 @@ public class Passwort extends JFrame{
 		public void action(){
 			String[] in = input.getText().split(" ");
 			String out = "";
-			if(first.isSelected() && second.isSelected()){
-				for(String c:in)
-					out+=String.valueOf(c.charAt(0))+String.valueOf(c.charAt(c.length()-1));	
-			}else if(first.isSelected()){
-				for(String c: in)
-				out+=String.valueOf(c.charAt(0));
-			}else if(second.isSelected()){
-				for(String c: in)
-					out+=String.valueOf(c.charAt(c.length()-1));
+			for (String c : in){
+				if(first.isSelected())
+					out += c.charAt(0);
+				if(second.isSelected())
+					out+= c.charAt(c.length()-1);
+				
 			}
 			password.setText(out);
 		}
